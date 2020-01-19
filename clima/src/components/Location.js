@@ -1,6 +1,15 @@
 import React from 'react';
-const Location = () => (
-    <h1>México</h1>
-);
+const Location = (props) => 
+{
+    //console.log(props);
+    //debugger;
+    const {city} = props;
+    return (
+        
+    <h1>
+        {city}
+    </h1>
+    );
+};
 
 export default Location;
