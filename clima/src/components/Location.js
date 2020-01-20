@@ -1,9 +1,10 @@
 import React from 'react';
-const Location = (props) => 
+import PropTypes from "prop-types";
+const Location = ({city}) => 
 {
     //console.log(props);
     //debugger;
-    const {city} = props;
+    //const {city} = props;
     return (
         
     <h1>
@@ -11,5 +12,9 @@ const Location = (props) =>
     </h1>
     );
 };
+
+Location.propTypes={
+    city:PropTypes.string.isRequired
+}
 
 export default Location;

@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
-import WeatherIcons from 'react-weathericons';
-const WeatherExtraInfo = ({humididty,wind}) =>{
-
+import PropTypes from "prop-types";
+const WeatherExtraInfo = ({humididty,wind}) =>{    
     // template script example
     return (<div>
     <span>{`${humididty} %`}</span>
-    <WeatherIcons name="cloud" size="2x" />
+    
     <br/>
     <span>{`${wind} %`}</span>
     </div>);
 }
 
-
-
+WeatherExtraInfo.prototypes={
+    humididty:PropTypes.number.isRequired,
+    wind:PropTypes.string.isRequired
+}
 
 export default WeatherExtraInfo;
